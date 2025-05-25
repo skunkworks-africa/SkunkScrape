@@ -49,3 +49,76 @@ cd SkunkScrape
 pip install -r requirements.txt
 python skunkscrape.py
 ```
+
+### 🐍 Python Requirements
+
+```bash
+pip install pandas requests beautifulsoup4 lxml Pillow duckduckgo-search
+```
+
+---
+
+## 📁 Folder Structure
+
+```
+SkunkScrape/
+│
+├── assets/                 # Icons, logos, screenshots
+├── skunkscrape.py          # Main Python app
+├── icon.ico                # App icon
+├── README.md               # You are here 🚀
+├── requirements.txt        # Dependencies
+└── logs/                   # Runtime logs
+```
+
+---
+
+## ⚙️ Usage
+
+1. **Launch** the app (`python skunkscrape.py`)
+2. Choose to **Import a CSV/XLSX** or **Search via Keyword**
+3. Click `Start Web Scraping`
+4. Once done, click `Save Results`
+5. (Optional) Configure email notifications in the script
+
+---
+
+## 📧 Notifications
+
+You can configure email alerts by updating:
+
+```python
+# send_notification() in skunkscrape.py
+msg['From'] = "your@email.com"
+server.login("your@email.com", "yourpassword")
+```
+
+> Use environment variables or `.env` for better security in production.
+
+---
+
+## 🛡️ License
+
+Licensed under the [MIT License](LICENSE).
+
+---
+
+## 🧠 About Skunkworks (Pty) Ltd
+
+SkunkScrape is a product of **Skunkworks Africa** 🇿🇦
+Building AI-first automation tools that simplify digital workflows and boost productivity.
+
+* 🌍 [https://www.skunkworks.africa](https://www.skunkworks.africa)
+* ✉️ [hello@skunkworks.africa](mailto:hello@skunkworks.africa)
+
+> *“Find Contacts. Fast. Automated.”*
+
+---
+
+## ⭐ Support & Contributions
+
+If you find this useful:
+
+* Leave a ⭐ on the repo
+* Share your feedback
+* Submit feature requests or bugs via [issues](https://github.com/skunkworks-africa/SkunkScrape/issues)
