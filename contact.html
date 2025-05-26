@@ -10,14 +10,17 @@
   <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
   <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js" defer></script>
   <style>
+    html, body {
+      height: 100%;
+    }
     body {
       background-color: #0b0c10;
       color: #C5C6C7;
       font-family: 'IBM Plex Sans', sans-serif;
       margin: 0;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
     header {
       background: #1f2833;
@@ -69,6 +72,7 @@
       padding: 2rem;
       text-align: center;
       font-size: 0.875rem;
+      margin-top: auto;
     }
     .footer-attribution {
       margin-top: 1rem;
