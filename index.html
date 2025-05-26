@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-carbon-theme="g100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SkunkScrape is a smart open-source contact scraper that automates the collection of emails, phone numbers, and addresses from websites using Python, DuckDuckGo, and IBM Carbon Design.">
+  <meta name="keywords" content="Python, scraper, contact scraper, DuckDuckGo, IBM Carbon Design, open-source, GUI app, desktop automation">
+  <meta name="author" content="Skunkworks (Pty) Ltd">
+  <title>SkunkScrape | Smart Contact Scraper by Skunkworks Africa</title>
+  <link rel="icon" href="https://github.com/skunkworks-africa/ScunkScrape/blob/ff4cebe301dd5eb7de1346e036f57b0094e162bc/assets/icon.ico?raw=true" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+  <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js" defer></script>
+  <style>
+    body {
+      background-color: #0b0c10;
+      color: #C5C6C7;
+      font-family: 'IBM Plex Sans', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+      animation: fadeInBody 1.5s ease-in-out;
+    }
+    .hero {
+      background: linear-gradient(135deg, #1f2833 60%, #0b0c10);
+      padding: 4rem 2rem;
+      text-align: center;
+      animation: slideFadeIn 1.2s ease-out;
+    }
+    .hero h1 {
+      color: #66FCF1;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: #C5C6C7;
+      font-size: 1.2rem;
+    }
+    .cta-buttons {
+      margin-top: 2rem;
+    }
+    .bx--btn--primary {
+      background-color: #66FCF1;
+      color: #0b0c10;
+      margin: 0 0.5rem;
+    }
+    .logo {
+      width: 180px;
+      margin: 1.5rem auto 2rem;
+      display: block;
+      transition: transform 0.3s ease, opacity 0.6s;
+      animation: zoomIn 1.2s ease;
+    }
+    .logo:hover {
+      transform: scale(1.05);
+    }
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
+    .section h2 {
+      color: #66FCF1;
+      margin-bottom: 1rem;
+    }
+    .bx--tile {
+      background-color: #1f2833;
+      color: #C5C6C7;
+      padding: 1.5rem;
+      margin: 1rem auto;
+      max-width: 100%;
+      transition: transform 0.3s;
+    }
+    .bx--tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 2px 10px rgba(102,252,241,0.2);
+    }
+    .interactive-feedback {
+      margin-top: 2rem;
+    }
+    .interactive-feedback textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      resize: vertical;
+      font-family: 'IBM Plex Sans';
+    }
+    .interactive-feedback button {
+      margin-top: 1rem;
+      background-color: #66FCF1;
+      color: #0b0c10;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 100;
+    }
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+    }
+    footer {
+      background-color: #1f2833;
+      color: #C5C6C7;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+    .footer-attribution {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #999;
+    }
+    @keyframes slideFadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <img src="https://github.com/skunkworks-africa/ScunkScrape/blob/ff4cebe301dd5eb7de1346e036f57b0094e162bc/assets/logo.svg?raw=true" alt="SkunkScrape Logo" class="logo">
+    <h1>Welcome to SkunkScrape</h1>
+    <p>Smart Web Scraper for Contact Info Extraction – Built with Python by Skunkworks Africa</p>
+    <div class="cta-buttons">
+      <a class="bx--btn bx--btn--primary" href="https://github.com/skunkworks-africa/ScunkScrape" target="_blank">View on GitHub</a>
+      <a class="bx--btn bx--btn--tertiary" href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank">Watch Demo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>What is SkunkScrape?</h2>
+      <div class="bx--tile">SkunkScrape is a modern Python-based desktop application for automating the discovery and extraction of contact information (emails, phone numbers, addresses) from websites via direct URLs or intelligent search queries. Leverages IBM Carbon Design for a robust UI and exceptional user experience.</div>
+    </section>
+
+    <section class="section bx--grid">
+      <div class="bx--row">
+        <div class="bx--col-md-4 bx--col-sm-12">
+          <div class="bx--tile"><h4>🔍 Keyword Search</h4><p>Search websites by topic or industry using DuckDuckGo integration.</p></div>
+        </div>
+        <div class="bx--col-md-4 bx--col-sm-12">
+          <div class="bx--tile"><h4>📥 File Import</h4><p>Import your URL lists via CSV/XLSX formats for bulk scraping.</p></div>
+        </div>
+        <div class="bx--col-md-4 bx--col-sm-12">
+          <div class="bx--tile"><h4>📤 Smart Export</h4><p>Save contact results to structured CSV or Excel with a single click.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Interactive Features</h2>
+      <div class="bx--tile"><p>From built-in progress bars to error-handling logs and retry logic – SkunkScrape adapts to your workflow with seamless visual feedback and state handling.</p></div>
+    </section>
+
+    <section class="section interactive-feedback">
+      <h2>💬 Share Your Feedback</h2>
+      <div class="bx--tile">
+        <p>Let us know how we can improve or what you'd like to see next!</p>
+        <textarea rows="4" placeholder="Your thoughts, feedback, or feature suggestions..."></textarea>
+        <br>
+        <button onclick="alert('Thank you for your feedback! (feature under development)')">Send Feedback</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/27686493591" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp">
+    </a>
+  </div>
+
+  <footer>
+    &copy; 2025 Skunkworks (Pty) Ltd. All rights reserved. | Built with ❤️ and Carbon in Africa.<br>
+    A Product by Skunkworks (Pty) Ltd.
+    <div class="footer-attribution">
+      Designed with Carbon Design System | <a href="https://github.com/skunkworks-africa/ScunkScrape" style="color:#66FCF1">Open Source on GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
