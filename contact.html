@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-carbon-theme="g100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact SkunkScrape - Smart Contact Scraper by Skunkworks Africa">
+  <meta name="author" content="Skunkworks (Pty) Ltd">
+  <title>Contact Us | SkunkScrape</title>
+  <link rel="icon" href="https://github.com/skunkworks-africa/ScunkScrape/blob/main/assets/icon.ico?raw=true" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+  <script src="https://unpkg.com/carbon-components/scripts/carbon-components.min.js" defer></script>
+  <style>
+    body {
+      background-color: #0b0c10;
+      color: #C5C6C7;
+      font-family: 'IBM Plex Sans', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #1f2833;
+      padding: 1rem 2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+    nav a {
+      color: #66FCF1;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .logo {
+      height: 40px;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      color: #66FCF1;
+      margin-bottom: 2rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 100;
+    }
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+    }
+    footer {
+      background-color: #1f2833;
+      color: #C5C6C7;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    .footer-attribution {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="https://github.com/skunkworks-africa/ScunkScrape/blob/main/assets/logo.png?raw=true" alt="SkunkScrape Logo" class="logo">
+      <div>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="features.html">Features</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com/skunkworks-africa/ScunkScrape" target="_blank">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="section-title">Contact Us</h1>
+    <form class="bx--form">
+      <div class="bx--form-item">
+        <label for="name" class="bx--label">Your Name</label>
+        <input id="name" type="text" class="bx--text-input" placeholder="Enter your name" required>
+      </div>
+      <div class="bx--form-item">
+        <label for="email" class="bx--label">Email Address</label>
+        <input id="email" type="email" class="bx--text-input" placeholder="Enter your email" required>
+      </div>
+      <div class="bx--form-item">
+        <label for="message" class="bx--label">Message</label>
+        <textarea id="message" class="bx--text-area" rows="5" placeholder="Write your message here..."></textarea>
+      </div>
+      <div class="bx--form-item">
+        <button class="bx--btn bx--btn--primary" type="submit">Send Message</button>
+      </div>
+    </form>
+  </main>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/27686493591" target="_blank" rel="noopener noreferrer">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp">
+    </a>
+  </div>
+
+  <footer>
+    &copy; 2025 Skunkworks (Pty) Ltd. All rights reserved. | Built with ❤️ and Carbon in Africa.<br>
+    A Product by Skunkworks (Pty) Ltd.
+    <div class="footer-attribution">
+      Designed with Carbon Design System | <a href="https://github.com/skunkworks-africa/ScunkScrape" style="color:#66FCF1">Open Source on GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
