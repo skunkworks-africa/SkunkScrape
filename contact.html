@@ -22,10 +22,12 @@
       flex-direction: column;
       min-height: 100vh;
     }
+
     header {
       background: #1f2833;
       padding: 1rem 2rem;
     }
+
     nav {
       display: flex;
       justify-content: space-between;
@@ -33,51 +35,109 @@
       max-width: 1200px;
       margin: auto;
     }
+
     nav a {
       color: #66FCF1;
       text-decoration: none;
       margin-left: 1rem;
-      font-weight: bold;
+      font-weight: 600;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     .logo {
       height: 40px;
     }
+
     main {
       flex: 1;
-      padding: 2rem;
-      max-width: 800px;
+      padding: 2rem 1rem;
+      max-width: 700px;
       margin: 0 auto;
     }
+
     .section-title {
       text-align: center;
       color: #66FCF1;
       margin-bottom: 2rem;
+      font-size: 2rem;
     }
+
+    .form-card {
+      background-color: #1f2833;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    }
+
+    .bx--form-item:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    .bx--text-input,
+    .bx--text-area {
+      background-color: #0b0c10;
+      border: 1px solid #66FCF1;
+      color: #C5C6C7;
+    }
+
+    .bx--text-input:focus,
+    .bx--text-area:focus {
+      outline: 2px solid #45A29E;
+    }
+
+    .bx--btn--primary {
+      background-color: #66FCF1;
+      color: #0b0c10;
+    }
+
+    .bx--btn--primary:hover {
+      background-color: #45A29E;
+    }
+
     .whatsapp-float {
       position: fixed;
       bottom: 25px;
       right: 25px;
       z-index: 100;
+      transition: transform 0.2s;
     }
+
     .whatsapp-float img {
       width: 60px;
       height: 60px;
     }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
     footer {
       background-color: #1f2833;
       color: #C5C6C7;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
       font-size: 0.875rem;
       margin-top: auto;
     }
+
     .footer-attribution {
       margin-top: 1rem;
       font-style: italic;
       color: #999;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
@@ -97,28 +157,30 @@
 
   <main>
     <h1 class="section-title">Contact Us</h1>
-    <form class="bx--form">
-      <div class="bx--form-item">
-        <label for="name" class="bx--label">Your Name</label>
-        <input id="name" type="text" class="bx--text-input" placeholder="Enter your name" required>
-      </div>
-      <div class="bx--form-item">
-        <label for="email" class="bx--label">Email Address</label>
-        <input id="email" type="email" class="bx--text-input" placeholder="Enter your email" required>
-      </div>
-      <div class="bx--form-item">
-        <label for="message" class="bx--label">Message</label>
-        <textarea id="message" class="bx--text-area" rows="5" placeholder="Write your message here..."></textarea>
-      </div>
-      <div class="bx--form-item">
-        <button class="bx--btn bx--btn--primary" type="submit">Send Message</button>
-      </div>
-    </form>
+    <div class="form-card">
+      <form class="bx--form" aria-label="Contact form">
+        <div class="bx--form-item">
+          <label for="name" class="bx--label">Your Name</label>
+          <input id="name" type="text" class="bx--text-input" placeholder="Enter your name" required>
+        </div>
+        <div class="bx--form-item">
+          <label for="email" class="bx--label">Email Address</label>
+          <input id="email" type="email" class="bx--text-input" placeholder="Enter your email" required>
+        </div>
+        <div class="bx--form-item">
+          <label for="message" class="bx--label">Message</label>
+          <textarea id="message" class="bx--text-area" rows="5" placeholder="Write your message here..." required></textarea>
+        </div>
+        <div class="bx--form-item">
+          <button class="bx--btn bx--btn--primary" type="submit" aria-label="Send your message">Send Message</button>
+        </div>
+      </form>
+    </div>
   </main>
 
   <div class="whatsapp-float">
-    <a href="https://wa.me/27686493591" target="_blank" rel="noopener noreferrer">
-      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp">
+    <a href="https://wa.me/27686493591" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+      <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="Chat on WhatsApp">
     </a>
   </div>
 
